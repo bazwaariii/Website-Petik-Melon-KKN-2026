@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Bricolage Grotesque', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-hand: 'Caveat', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #FAF6EF;
+  color: #2E2A26;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Organic canvas texture & custom scrollbars */
+.bg-canvas {
+  background-color: #FAF6EF;
+  background-image: radial-gradient(#3A7D44 0.6px, transparent 0.6px);
+  background-size: 24px 24px;
+}
+
+.glass-nav {
+  background: rgba(250, 246, 239, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(58, 125, 68, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(242, 153, 74, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A7D44;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F2994A;
+}
+
+/* Doodle animation effects */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
